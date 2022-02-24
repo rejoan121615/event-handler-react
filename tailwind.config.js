@@ -3,8 +3,14 @@ module.exports = {
     theme: {
         extend: {
             screens: {
-                'mxl': '1700px'
-            }
+                mxl: "1700px",
+            },
+            fontFamily: {
+                circular: ["circular"],
+            },
+            colors: {
+                primary: "#AEAFFF",
+            },
         },
     },
     plugins: [],
