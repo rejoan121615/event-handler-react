@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  @apply bg-[#424F55]
+}
+
+@layer components {
+  .container {
+    @apply mx-auto pt-4 px-6 sm:px-0;
+  }
+}
