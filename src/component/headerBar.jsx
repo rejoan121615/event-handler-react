@@ -9,7 +9,7 @@ const HeaderBar = (props) => {
     };
 
     return (
-        <section>
+        <header>
             <div className="container mx-auto flex flex-wrap justify-between sm:items-center">
                 {/* logo  */}
                 <a href="" id="logo" className="text-center text-black order-1">
@@ -57,7 +57,7 @@ const HeaderBar = (props) => {
                     <span className="a w-full h-1 block rounded-sm bg-white"></span>
                 </button>
             </div>
-        </section>
+        </header>
     );
 };
 

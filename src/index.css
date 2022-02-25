@@ -29,20 +29,25 @@ body {
     }
 
     .container {
-        @apply mx-auto pt-4 px-6;
+        @apply mx-auto px-6;
     }
     .display-1 {
-        font-family: Circular;
+        @apply text-5xl xl:text-[64px];
+        font-family: circular;
         font-style: normal;
         font-weight: 900;
-        font-size: 48px;
         line-height: 61px;
-        display: flex;
         align-items: center;
         color: #aeafff;
     }
     .display-2 {
         @apply .display-1;
+    }
+    .display-3 {
+        @apply text-[25px] leading-[110%] sm:leading-[115%] sm:text-[30px] md:text-[35px] md:leading-[125%] lg:leading-[130%] lg:text-[38px] xl:text-[40px]  xl:leading-[140%];
+        font-family: circular;
+        font-style: normal;
+        font-weight: bold;
     }
     .para {
         font-family: circular;
@@ -50,4 +55,8 @@ body {
         font-weight: 500;
         letter-spacing: 0.1em;
     }
+}
+
+#root {
+    @apply py-4 xl:py-6 md:flex md:flex-col md:justify-between md:h-screen;
 }
