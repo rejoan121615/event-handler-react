@@ -11,16 +11,16 @@ const MainPageIntro = (props) => {
     <section className='mt-24 md:mt-0'>
         {/* intro container  */}
       <div className="container">
-        <SessionsIntro />
+        {/* <SessionsIntro /> */}
       </div>
       {/* event container  */}
       <div className="container">
         {/* left side  */}
-        <div className="left">
-          <HighlightCard />
-          <CountDown />
-          <UpcomingEvents />
-          <TitleCard />
+        <div className="left grid grid-cols-1 gap-y-6 lg:grid-cols-2 lg:gap-x-6">
+          <HighlightCard className='lg:col-span-1'/>
+          <CountDown className="" />
+          <TitleCard className="lg:col-start-2 lg:row-start-2" />
+          <UpcomingEvents className="lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2 lg:flex lg:flex-col lg:justify-start" />
           {/* <EventTimer /> */}
           {/* <EventTitle /> */}
         </div>

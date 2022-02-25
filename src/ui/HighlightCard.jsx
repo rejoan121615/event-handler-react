@@ -6,13 +6,10 @@ import Btn from "./Btn";
 const HighlightCard = (props) => {
     return (
         <div
-            className="
-          w-full flex flex-col rounded-[42px] bg-[#556166] p-5 xs:p-7
-            lg:flex-row lg:items-center lg:justify-between xl:items-stretch xl:p-10
-          "
+            className={`w-full flex flex-col rounded-[42px] bg-[#556166] p-5 xs:p-7 lg:flex-col lg:items-center lg:justify-between xl:items-stretch xl:p-10 ${props.className}`}
         >
             {/* left side text   */}
-            <div className="order-2 mt-6 lg:order-1 lg:w-[48%] lg:mt-0 xl:flex xl:flex-col xl:flex-wrap xl:justify-between">
+            <div className="order-2 mt-6 lg:w-full lg:order-2 xl:flex xl:flex-col xl:flex-wrap xl:justify-between">
                 {/* title  */}
                 <div className="flex flex-col xs:flex-row xs:justify-between">
                     {/* left  */}
@@ -65,7 +62,7 @@ const HighlightCard = (props) => {
                 </div>
             </div>
             {/* right side img  */}
-            <div className="order-1 lg:order-2 lg:w-[48%]">
+            <div className="order-1 lg:w-full lg:order-1">
                 <img src={CardImg} className="w-full" alt="" />
             </div>
         </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const IntroCard = (props) => {
+const EventCard = (props) => {
     return (
       <div className="
         bg-[#525e63] p-4 flex flex-col justify-between items-center rounded-[32px] w-32
@@ -24,4 +24,4 @@ const IntroCard = (props) => {
     );
 };
 
-export default IntroCard;
+export default EventCard;
