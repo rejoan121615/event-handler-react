@@ -32,7 +32,7 @@ body {
         @apply mx-auto px-6;
     }
     .display-1 {
-        @apply text-5xl xl:text-[64px];
+        @apply text-4xl sm:text-5xl  xl:text-[64px];
         font-family: circular;
         font-style: normal;
         font-weight: 900;
@@ -41,7 +41,13 @@ body {
         color: #aeafff;
     }
     .display-2 {
-        @apply .display-1;
+        @apply text-[24px] sm:text-[36px]  xl:text-[48px];
+        font-family: circular;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 61px;
+        align-items: center;
+        color: #aeafff;
     }
     .display-3 {
         @apply text-[25px] leading-[110%] sm:leading-[115%] sm:text-[30px] md:text-[35px] md:leading-[125%] lg:leading-[130%] lg:text-[38px] xl:text-[40px]  xl:leading-[140%];
