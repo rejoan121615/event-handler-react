@@ -9,7 +9,7 @@ const StartedCard = () => {
     return (
         <div className="
              bg-[#546166] w-[90%] rounded-2xl p-4 relative mx-auto mt-24 mb-16 xs:p-6 sm:p-8 sm:max-w-[600px] lg:container
-             lg:grid lg:grid-cols-2 lg:gap-x-8 xl:max-w-[1300px] xl:p-14 xl:grid-cols-lg-1/1.2 2xl:grid-cols-2 2xl:gap-x-12
+             lg:grid lg:grid-cols-2 lg:gap-x-8 xl:max-w-[1300px] xl:p-10 xl:rounded-[32px] xl:grid-cols-lg-1/1.2 2xl:gap-x-12 2xl:max-w-[1400px]
         ">
             <button className=" -top-16 right-0 absolute w-10 h-10 bg-[#2b2f31] p-3 rounded-lg">
                 <img src={Crsimg} alt="cross btn" />
@@ -35,7 +35,7 @@ const StartedCard = () => {
                 {/* title  */}
                 <div
                     className="
-                    flex mt-5 flex-col xs:justify-between xs:items-start xs:flex-row xl:mt-8
+                    flex mt-5 flex-col xs:justify-between xs:items-start xs:flex-row xl:mt-8 xl:items-center
                     "
                 >
                     {/* date and time  */}
@@ -78,7 +78,7 @@ const StartedCard = () => {
                 {/* top text  */}
                 <div className="">
                     <div className=" mt-6 lg:mt-0">
-                        <h1 className="display-2 leading-[115%] lg:text-3xl xl:text-[34px] 2xl:text-[45px] xl:leading-[120%]">
+                        <h1 className="display-2 leading-[115%] lg:text-3xl xl:text-[38px] 2xl:text-[42px] xl:leading-[120%]">
                             Getting Started with Figma; A Designer’s First Steps
                         </h1>
                     </div>
@@ -97,7 +97,7 @@ const StartedCard = () => {
                     </div>
                 </div>
                 {/* bottom text  */}
-                <div className=" mt-8 sm:grid sm:grid-cols-2 sm:gap-x-6 lg:mt-2 lg:grid-cols-1 xl:grid-cols-2 xl:mt-6 xl:grid-cols-lg-1/0.8">
+                <div className=" mt-8 sm:grid sm:grid-cols-2 sm:gap-x-6 lg:mt-2 lg:grid-cols-1 xl:mt-6 xl:grid-cols-lg-1/0.8 2xl:mt-12">
                     {/* attendence  */}
                     <AttendeesList />
                     <EventConferApps />

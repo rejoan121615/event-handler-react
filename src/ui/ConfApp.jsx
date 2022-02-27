@@ -5,7 +5,7 @@ const ConfApp = (props) => {
         <div
             className={` rounded-2xl text-[#657175] ${
                 props.actBg ? props.actBg : "bg-[#657175]"
-            } p-5 justify-center flex items-center xs:h-28 xl:h-24`}
+            } p-5 justify-center flex items-center xs:h-28 xl:h-24 2xl:h-28`}
         >
             {props.active && (
                 <img src={props.img} alt={props.alt} className=" w-10" />
