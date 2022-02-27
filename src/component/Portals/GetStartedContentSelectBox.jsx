@@ -5,7 +5,7 @@ import AttendeesList from "./AttendeesList";
 import EventConferApps from "./EventConferApps";
 import Crsimg from "../../assets/img/icons/cross-btn.png";
 
-const GetStartedContentSelectBox = () => {
+const GetStartedContentSelectBox = (props) => {
     return (
         <div
             className="
@@ -63,6 +63,7 @@ const GetStartedContentSelectBox = () => {
                     </div>
                     {/* btn  */}
                     <button
+                        onClick={props.joinTrg}
                         className=" 
                         text-black mt-4 px-4 py-2 rounded-full text-sm bg-primary font-bold capitalize
                         xs:inline-block xs:px-7 xs:py-3 xl:mt-0

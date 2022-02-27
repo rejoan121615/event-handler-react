@@ -2,12 +2,12 @@ import React from "react";
 import ZoomImg from "../../assets/img/icons/zoom.png";
 import LeftArrow from "../../assets/img/icons/left-arrow.png";
 
-const JoinBoxPopup = () => {
+const JoinBoxPopup = (props) => {
     return (
       <div className=" bg-[#546166] relative mx-auto rounded-3xl px-4 pt-10 pb-6
          sm:px-8 sm:py-8 sm:max-w-[750px]">
             {/* back button  */}
-        <button className="
+        <button onClick={props.back} className="
              absolute right-5 top-5 bg-sky-600 w-10 h-10 flex items-center justify-center text-white font-medium rounded-xl
             cursor-pointer sm:right-7 sm:top-7
           ">

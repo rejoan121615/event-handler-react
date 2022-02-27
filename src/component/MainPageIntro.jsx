@@ -6,14 +6,19 @@ import UpcomingEvents from "./UpcomingEvents";
 import CountDown from "../ui/CountDown.jsx";
 import TitleCard from "../ui/TitleCard";
 import DownArrow from "../assets/img/icons/down.png";
-import GetStartedPortal from './Portals/GetStartedPortal'
+import GetStartedPortal from "./Portals/GetStartedPortal";
 
 const MainPageIntro = (props) => {
-  const [sessionEventToggle, setSessionEventToggle] = useState(false);
-  
-  const showHideHandler = () => {
-    setSessionEventToggle(!sessionEventToggle);
-  }
+    const [sessionEventToggle, setSessionEventToggle] = useState(false);
+    const [showGetStarted, setShowGetStarted] = useState(false);
+
+    const showGetStartedHandler = () => {
+        setShowGetStarted(!showGetStarted);
+    };
+
+    const showHideHandler = () => {
+        setSessionEventToggle(!sessionEventToggle);
+    };
 
     return (
         <section>
@@ -37,7 +42,9 @@ const MainPageIntro = (props) => {
                         
                       "
                         >
-                            <HighlightCard />
+                            <HighlightCard
+                                joinHandler={showGetStartedHandler}
+                            />
                             <CountDown />
                             <TitleCard />
                             <UpcomingEvents />
@@ -46,7 +53,7 @@ const MainPageIntro = (props) => {
                 </div>
             </div>
             {/* get started portals  */}
-            <GetStartedPortal />
+            {showGetStarted && <GetStartedPortal closeHandler={showGetStartedHandler} />}
         </section>
     );
 };

@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import HighLightImg from "../../assets/img/eventImg/Highlight.png";
 import Btn from "../../ui/Btn";
 import AttendeesList from "./AttendeesList";
 import EventConferApps from "./EventConferApps";
-import Crsimg from '../../assets/img/icons/cross-btn.png';
+import Crsimg from "../../assets/img/icons/cross-btn.png";
 import GetStartedContentSelectBox from "./GetStartedContentSelectBox";
 import JoinBoxPopup from "./JoinBoxPopup";
 
+const StartedCard = (props) => {
 
-const StartedCard = () => {
+
+
+    const [showJoinBox, setShowJoinBox] = useState(false);
+
+    const crossHandler = () => {
+        props.closeHandler();
+    }
+
+    const showJoinBoxhandler = (props) => {
+        setShowJoinBox(!showJoinBox);
+    }
+
     return (
         <div
             className="
@@ -16,12 +28,18 @@ const StartedCard = () => {
               lg:grid-cols-2 lg:gap-x-8 xl:max-w-[1300px] xl:rounded-[32px] xl:grid-cols-lg-1/1.2 2xl:gap-x-12 2xl:max-w-[1400px]
         "
         >
-            <button className=" -top-16 right-0 absolute w-10 h-10 bg-[#2b2f31] p-3 rounded-lg">
+            <button
+                onClick={crossHandler}
+                className=" -top-16 right-0 absolute w-10 h-10 bg-[#2b2f31] p-3 rounded-lg"
+            >
                 <img src={Crsimg} alt="cross btn" />
             </button>
             {/* get started content box  */}
-            {/* <GetStartedContentSelectBox /> */}
-            <JoinBoxPopup />
+            {showJoinBox ? (
+                <JoinBoxPopup back={showJoinBoxhandler} />
+            ) : (
+                <GetStartedContentSelectBox joinTrg={showJoinBoxhandler} />
+            )}
         </div>
     );
 };

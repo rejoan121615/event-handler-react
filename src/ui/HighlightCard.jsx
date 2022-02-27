@@ -14,9 +14,11 @@ const HighlightCard = (props) => {
             "
         >
             {/* left side text   */}
-            <div className="
+            <div
+                className="
             order-2 mt-6 lg:w-full lg:order-2 xl:flex xl:flex-col xl:flex-wrap xl:justify-between
-            2xl:w-3/6">
+            2xl:w-3/6"
+            >
                 {/* title  */}
                 <div className="flex flex-col xs:flex-row xs:justify-between">
                     {/* left  */}
@@ -64,7 +66,9 @@ const HighlightCard = (props) => {
                 </div>
                 {/* buttons  */}
                 <div className="flex flex-col mt-8 xs:flex-row lg:mt-6">
-                    <Btn active="true">join now</Btn>
+                    <Btn click={props.joinHandler} active="true">
+                        join now
+                    </Btn>
                     <Btn className="mt-4 xs:mt-0 xs:ml-5">view events</Btn>
                 </div>
             </div>

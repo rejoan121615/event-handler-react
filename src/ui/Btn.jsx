@@ -8,6 +8,7 @@ const Btn = (props) => {
 
     return (
         <button
+            onClick={props.click}
             className={`${(props.active ? activeStyle : style)} ${props.className}`}
         >
             {props.children}
