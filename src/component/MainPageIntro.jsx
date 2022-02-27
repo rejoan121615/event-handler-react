@@ -6,6 +6,7 @@ import UpcomingEvents from "./UpcomingEvents";
 import CountDown from "../ui/CountDown.jsx";
 import TitleCard from "../ui/TitleCard";
 import DownArrow from "../assets/img/icons/down.png";
+import GetStartedPortal from './Portals/GetStartedPortal'
 
 const MainPageIntro = (props) => {
   const [sessionEventToggle, setSessionEventToggle] = useState(false);
@@ -44,6 +45,8 @@ const MainPageIntro = (props) => {
                     )}
                 </div>
             </div>
+            {/* get started portals  */}
+            <GetStartedPortal />
         </section>
     );
 };
