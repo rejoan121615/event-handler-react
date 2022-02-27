@@ -7,12 +7,15 @@ import Crsimg from '../../assets/img/icons/cross-btn.png';
 
 const StartedCard = () => {
     return (
-        <div className=" bg-[#546166] w-[90%] rounded-2xl p-4 relative mx-auto mt-24 mb-16">
+        <div className="
+             bg-[#546166] w-[90%] rounded-2xl p-4 relative mx-auto mt-24 mb-16 xs:p-6 sm:p-8 sm:max-w-[600px] lg:container
+             lg:grid lg:grid-cols-2 lg:gap-x-8 xl:max-w-[1300px] xl:p-14 xl:grid-cols-lg-1/1.2 2xl:grid-cols-2 2xl:gap-x-12
+        ">
             <button className=" -top-16 right-0 absolute w-10 h-10 bg-[#2b2f31] p-3 rounded-lg">
                 <img src={Crsimg} alt="cross btn" />
             </button>
             {/* img && content */}
-            <div>
+            <div className=" xl:order-3">
                 {/* img wrapper  */}
                 <div className=" relative">
                     <img
@@ -23,7 +26,7 @@ const StartedCard = () => {
                     <button
                         className=" 
                       px-3 py-2 font-bold uppercase rounded-lg bg-[##ffffff2e] text-white border
-                      text-xs absolute left-4 bottom-4
+                      text-xs absolute left-4 bottom-4 sm:text-base sm:left-6 sm:bottom-6
                     "
                     >
                         ask a question{" "}
@@ -32,17 +35,17 @@ const StartedCard = () => {
                 {/* title  */}
                 <div
                     className="
-                    flex mt-5 flex-col xs:justify-between xs:items-start xs:flex-row
+                    flex mt-5 flex-col xs:justify-between xs:items-start xs:flex-row xl:mt-8
                     "
                 >
                     {/* date and time  */}
                     <div className="">
                         {/* top line  */}
                         <div className=" flex">
-                            <h3 className=" display-2 capitalize leading-[100%]">
+                            <h3 className=" display-2 capitalize leading-[100%] xl:text-[35px]">
                                 thursday
                             </h3>
-                            <div className=" flex items-center ml-4">
+                            <div className=" flex items-center ml-4 xl:ml-10">
                                 <span className="w-2 h-2 rounded-full bg-[red] block"></span>
                                 <span className=" font-medium text-base capitalize ml-2 text-white">
                                     live
@@ -50,11 +53,11 @@ const StartedCard = () => {
                             </div>
                         </div>
                         {/* bottom line  */}
-                        <div className="mt-3">
+                        <div className="mt-3 xl:flex">
                             <p className=" text-white text-base capitalize">
                                 Jan 7th, 2022
                             </p>
-                            <p className=" text-slate-300 text-base">
+                            <p className=" text-slate-300 text-base xl:ml-5">
                                 Friday, 10:00pm WAT
                             </p>
                         </div>
@@ -63,7 +66,7 @@ const StartedCard = () => {
                     <button
                         className=" 
                         text-black mt-4 px-4 py-2 rounded-full text-sm bg-primary font-bold capitalize
-                        xs:inline-block xs:px-7 xs:py-3
+                        xs:inline-block xs:px-7 xs:py-3 xl:mt-0
                     "
                     >
                         join now
@@ -71,30 +74,30 @@ const StartedCard = () => {
                 </div>
             </div>
             {/* text content  */}
-            <div>
+            <div className=" xl:order-2">
                 {/* top text  */}
                 <div className="">
-                    <div className=" mt-6">
-                        <h1 className="display-2 leading-[115%]">
+                    <div className=" mt-6 lg:mt-0">
+                        <h1 className="display-2 leading-[115%] lg:text-3xl xl:text-[34px] 2xl:text-[45px] xl:leading-[120%]">
                             Getting Started with Figma; A Designer’s First Steps
                         </h1>
                     </div>
                     {/* para  */}
                     <div className=" mt-4">
-                        <p className="text-sm text-[#CCCCCC]">
+                        <p className="text-sm text-[#CCCCCC] sm:text-base 2xl:text-[18px]">
                             We exist to help people get answers to questions
                             threy’ve not found. Either that they cannot ask them
                             or they do not know to frame them, or the answers
                             are not framed well.
                         </p>
-                        <p className="text-sm text-[#CCCCCC] mt-2">
+                        <p className="text-sm text-[#CCCCCC] mt-2 sm:text-base 2xl:text-[18px]">
                             Either that they cannot ask them or they do not know
                             to frame them, or the answers are not framed well.
                         </p>
                     </div>
                 </div>
                 {/* bottom text  */}
-                <div className=" mt-8">
+                <div className=" mt-8 sm:grid sm:grid-cols-2 sm:gap-x-6 lg:mt-2 lg:grid-cols-1 xl:grid-cols-2 xl:mt-6 xl:grid-cols-lg-1/0.8">
                     {/* attendence  */}
                     <AttendeesList />
                     <EventConferApps />

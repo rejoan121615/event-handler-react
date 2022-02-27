@@ -33,6 +33,10 @@ module.exports = {
             colors: {
                 primary: "#AEAFFF",
             },
+            gridTemplateColumns: {
+                'lg-1/1.2': '1fr 1.3fr',
+                'lg-1/0.8': '1fr 0.8fr'
+            }
         },
     },
     plugins: [],
