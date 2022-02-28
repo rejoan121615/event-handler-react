@@ -1,12 +1,13 @@
 import React from "react";
 import Home from "./page/Home";
-import Events from './page/Events'
+import Directory from './page/Directory';
+
 
 const App = (props) => {
     return (
         <React.Fragment>
-            <Home />
-            {/* <Events /> */}
+            {/* <Home /> */}
+            <Directory />
         </React.Fragment>
     );
 };
