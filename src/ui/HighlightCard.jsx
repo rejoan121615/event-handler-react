@@ -2,6 +2,7 @@ import React from "react";
 import Titleh1 from "./Titleh1";
 import CardImg from "../assets/img/eventImg/Highlight.png";
 import Btn from "./Btn";
+import ThumbnailLists from "./ThumbnailLists";
 
 const HighlightCard = (props) => {
     return (
@@ -52,17 +53,7 @@ const HighlightCard = (props) => {
                         framed well
                     </p>
                     {/* thubnail  */}
-                    <div className="flex items-center">
-                        <div className="flex mt-3">
-                            <span className="w-10 h-10 rounded-full bg-red-800"></span>
-                            <span className="w-10 h-10 rounded-full bg-orange-500 -ml-3"></span>
-                            <span className="w-10 h-10 rounded-full bg-stone-900 -ml-3"></span>
-                            <span className="w-10 h-10 rounded-full bg-green-700 -ml-3"></span>
-                        </div>
-                        <p className="text-white font-medium ml-5">
-                            500+ going
-                        </p>
-                    </div>
+                    <ThumbnailLists />
                 </div>
                 {/* buttons  */}
                 <div className="flex flex-col mt-8 xs:flex-row lg:mt-6">

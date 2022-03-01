@@ -1,5 +1,6 @@
 const defaultTheme = require("tailwindcss/defaultConfig");
 
+
 module.exports = {
     content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
     theme: {
@@ -32,10 +33,18 @@ module.exports = {
             },
             colors: {
                 primary: "#AEAFFF",
+                sec: '#ffb9b9'
             },
             gridTemplateColumns: {
-                'lg-1/1.2': '1fr 1.3fr',
-                'lg-1/0.8': '1fr 0.8fr'
+                "lg-1/1.2": "1fr 1.3fr",
+                "lg-1/0.8": "1fr 0.8fr",
+            },
+            backgroundImage: {
+                "intro-card-bd": "url('./src/assets/img/directory/graph.png')",
+                'careerTrans': "url('./src/assets/img/directory/career trans.png')"
+            },
+            backgroundSize: {
+                'full-100': '100% 100%'
             }
         },
     },
