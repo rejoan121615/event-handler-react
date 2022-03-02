@@ -1,7 +1,8 @@
 import React from 'react'
 import UserImg from '../assets/img/users/user.png'
 
-const User = () => {
+const User = (props) => {
+    console.log("user props => ", props)
   return (
       <div className=" flex mb-2 last:mb-0 2xl:mb-0">
           {/* img  */}
@@ -10,8 +11,8 @@ const User = () => {
           </div>
           {/* text  */}
           <div className=" flex flex-col ml-3">
-              <h6 className=" font-medium text-white capitalize">
-                  adeyinka johnson <span className=" text-primary">joined</span>
+              <h6 className=" text-white capitalize">
+                  adeyinka johnson {props.status}
               </h6>
               <p className=" text-zinc-400 capitalize">just now</p>
           </div>

@@ -10,7 +10,8 @@ const ThumbnailLists = (props) => {
                     ? props.items.map((item, index) => {
                           return (
                               <div
-                                  className={` rounded-full ${
+                                    key={index + "a"}
+                                    className={` rounded-full ${
                                       !props.big
                                           ? "w-10 h-10 -ml-3 first:ml-0"
                                           : " w-10 h-10 -ml-3 xl:w-12 xl:h-12 xl:-ml-5"
@@ -19,7 +20,6 @@ const ThumbnailLists = (props) => {
                                   <img
                                       className=" w-full h-full"
                                       src={item}
-                                      key={index + "a"}
                                       alt=""
                                   />
                               </div>

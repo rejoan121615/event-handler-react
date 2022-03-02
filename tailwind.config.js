@@ -33,7 +33,8 @@ module.exports = {
             },
             colors: {
                 primary: "#AEAFFF",
-                sec: '#ffb9b9'
+                sec: "#ffb9b9",
+                "sec-100": "#ffb9b917",
             },
             gridTemplateColumns: {
                 "lg-1/1.2": "1fr 1.3fr",
@@ -41,11 +42,12 @@ module.exports = {
             },
             backgroundImage: {
                 "intro-card-bd": "url('./src/assets/img/directory/graph.png')",
-                'careerTrans': "url('./src/assets/img/directory/career trans.png')"
+                careerTrans:
+                    "url('./src/assets/img/directory/career trans.png')",
             },
             backgroundSize: {
-                'full-100': '100% 100%'
-            }
+                "full-100": "100% 100%",
+            },
         },
     },
     plugins: [],
