@@ -23,7 +23,7 @@ const MainPageIntro = (props) => {
     return (
         <section>
             {/* intro container  */}
-            <div className="container py-12 md:py-24 relative">
+            <div className="container py-12 md:py-24 relative xl:py-12">
                 {!sessionEventToggle && <SessionsIntro />}
                 <div className="relative">
                     {/* button  */}

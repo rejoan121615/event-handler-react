@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink, Link } from "react-router-dom";
 
 const HeaderBar = (props) => {
     // nav state
@@ -12,13 +13,13 @@ const HeaderBar = (props) => {
         <header>
             <div className="container mx-auto flex flex-wrap justify-between sm:items-center">
                 {/* logo  */}
-                <a href="" id="logo" className="text-center text-black order-1">
+                <Link to="/" id="logo" className="text-center text-black order-1">
                     <h1 className="font-black uppercase font-sans text-2xl">
                         <span className="text-orange-600">md</span>
                         <span className="text-black">.</span>
                         <span className="text-red-500">rej</span>
                     </h1>
-                </a>
+                </Link>
                 {/* page links  */}
 
                 <div
@@ -27,24 +28,24 @@ const HeaderBar = (props) => {
                     } flex-col justify-between w-full order-3 bg-stone-500 mt-4 rounded-lg py-4
                     sm:flex sm:flex-row sm:w-9/12 sm:bg-transparent sm:mt-0 sm:justify-end`}
                 >
-                    <a
-                        href=""
+                    <NavLink
+                        to="/about"
                         className="text-white text-sm font-medium px-8 flex items-center rounded-md xl:px-10 mxl:px-12 mb-2 sm:mb-0 transition-all hover:bg-[#AEAFFF]"
                     >
                         About
-                    </a>
-                    <a
-                        href=""
+                    </NavLink>
+                    <NavLink
+                        to="/faqs"
                         className="text-white text-sm font-medium px-8 flex items-center rounded-md xl:px-10 mxl:px-12 mb-2 sm:mb-0 transition-all hover:bg-[#AEAFFF]"
                     >
                         FAQs
-                    </a>
-                    <a
-                        href=""
+                    </NavLink>
+                    <NavLink
+                        to="/contact-us"
                         className="text-white text-sm font-medium px-8 flex items-center rounded-md xl:px-10 mxl:px-12 transition-all hover:bg-[#AEAFFF]"
                     >
                         Contact Us
-                    </a>
+                    </NavLink>
                 </div>
 
                 {/* resp navbar  */}

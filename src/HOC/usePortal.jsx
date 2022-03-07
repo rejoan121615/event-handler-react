@@ -15,7 +15,6 @@ const PortalElement = (props) => {
 };
 
 const usePortal = (PushedComponent, styleClass) => {
-    console.log("props ", styleClass);
     return class NewClassess extends React.Component {
         // state
         state = {

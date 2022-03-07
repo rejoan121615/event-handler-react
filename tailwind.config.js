@@ -34,6 +34,7 @@ module.exports = {
             colors: {
                 primary: "#AEAFFF",
                 sec: "#ffb9b9",
+                yellow: "#fdd365",
                 "sec-100": "#ffb9b917",
             },
             gridTemplateColumns: {
