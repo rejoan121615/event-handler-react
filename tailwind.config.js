@@ -40,6 +40,7 @@ module.exports = {
             gridTemplateColumns: {
                 "lg-1/1.2": "1fr 1.3fr",
                 "lg-1/0.8": "1fr 0.8fr",
+                "sess-xl-col": '1.2fr 1fr 1.2fr'
             },
             backgroundImage: {
                 "intro-card-bd": "url('./src/assets/img/directory/graph.png')",
