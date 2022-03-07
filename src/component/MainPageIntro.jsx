@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import SessionsIntro from "./SessionsIntro";
 import AllEventsPage from "./AllEventsPage";
 import HighlightCard from "../ui/HighlightCard";
@@ -12,33 +12,36 @@ const MainPageIntro = (props) => {
     const [sessionEventToggle, setSessionEventToggle] = useState(false);
     const [showGetStarted, setShowGetStarted] = useState(false);
 
+    const wrapperRef = useRef()
+
     const showGetStartedHandler = () => {
         setShowGetStarted(!showGetStarted);
     };
 
-    const showHideHandler = () => {
-        setSessionEventToggle(!sessionEventToggle);
+    const translateHandler = () => {
+        wrapperRef.current.classList.toggle("sessionTranslate")
     };
 
     return (
-        <section>
+        <section className="">
             {/* intro container  */}
             <div className="container py-12 md:py-24 relative xl:py-12">
-                {!sessionEventToggle && <SessionsIntro />}
-                <div className="relative">
-                    {/* button  */}
-                    <button
-                        onClick={showHideHandler}
-                        className="w-12 h-10 pointer block mx-auto"
-                    >
-                        <img src={DownArrow} alt="" />
-                    </button>
-                    {/* event content          */}
-                    {sessionEventToggle && (
+                <div ref={wrapperRef} className=" 2xl:flex 2xl:w-[170vw] 2xl:items-center 2xl:transition-all">
+                    <SessionsIntro />
+                    <div className="relative 2xl:container 2xl:px-0 2xl:flex 2xl:items-center 2xl:px-12">
+                        {/* button  */}
+                        <button
+                            onClick={translateHandler}
+                            className="w-12 h-10 pointer block mx-auto 2xl:w-28 2xl:h-28 mxl:-translate-x-5"
+                        >
+                            <img className=" 2xl:rotate-90 " src={DownArrow} alt="" />
+                        </button>
+                        {/* event content          */}
+
                         <div
                             className="
                         left grid grid-cols-1 gap-y-6 mt-12 relative lg:grid-cols-2 lg:gap-x-6 2xl:grid-cols-3
-                        2xl:gap-x-10
+                        2xl:gap-x-10 2xl:mt-0
                         
                       "
                         >
@@ -49,11 +52,13 @@ const MainPageIntro = (props) => {
                             <TitleCard />
                             <UpcomingEvents />
                         </div>
-                    )}
+                    </div>
                 </div>
             </div>
             {/* get started portals  */}
-            {showGetStarted && <GetStartedPortal closeHandler={showGetStartedHandler} />}
+            {showGetStarted && (
+                <GetStartedPortal closeHandler={showGetStartedHandler} />
+            )}
         </section>
     );
 };

@@ -24,7 +24,7 @@ const SessionsIntro = () => {
     ]);
 
     return (
-        <div className="w-full mt-24 mb-12 sm:w-[470px] md:w-[530px] xl:w-[605px]">
+        <div className="w-full mt-24 mb-12 sm:w-[470px] md:w-[530px] xl:w-[605px] xl:my-0">
             <h1 className="display-1">Sessions</h1>
             {/* search bar  */}
             <input
