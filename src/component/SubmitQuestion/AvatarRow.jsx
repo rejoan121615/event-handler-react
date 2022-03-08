@@ -9,9 +9,9 @@ import Avatar7 from "../../assets/img/askAquestion/7.png";
 
 const AvatarRow = () => {
     return (
-        <div className="w-screen absolute left-0 top-0 h-[92%] mt-[4%]">
+        <div className="w-screen absolute left-0 top-0 h-[92%] mt-[4%] z-10">
             <div className="container h-full">
-                <ul className=" list-none flex flex-col items-start gap-x-4 h-full justify-between w-[320px] items-center">
+                <ul className=" list-none flex flex-col gap-x-4 h-full justify-between w-[320px] items-center">
                     <li className=" rounded-full bg-[#3c484d] overflow-hidden w-[130px] h-[130px]">
                         <img src={Avatar1} alt="avatar image" />
                     </li>

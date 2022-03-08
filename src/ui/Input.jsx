@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";     
-import Incognito from '../assets/img/icons/form/incognito.png'
+import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+import Incognito from "../assets/img/icons/form/incognito.png";
 
 const Input = (props) => {
     const [inputVal, setInputVal] = useState("");
@@ -62,6 +62,11 @@ const Input = (props) => {
                 </select>
             );
             break;
+        case "textbox":
+            input = (
+                <textarea className=" bg-transparent rounded-full focus:outline-none pl-2 text-white text-sm sm:text-base w-[85%]"></textarea>
+            );
+            break;
         default:
             input = (
                 <input
@@ -69,12 +74,14 @@ const Input = (props) => {
                     value={inputVal}
                     onChange={changeHandler}
                     placeholder={props.placeholder}
-                    className=" bg-transparent rounded-full focus:outline-none pl-2 text-[#E6E6E6] text-sm sm:text-base w-[85%]"
+                    className=" bg-transparent rounded-full focus:outline-none pl-2 text-white text-sm sm:text-base w-[85%]"
                 />
             );
             break;
     }
-    return (
+
+    // input components
+    const inputComponent = (
         <div className=" bg-[#556166] rounded-full p-2 flex items-center md:p-3">
             <div className=" w-8 h-8 flex justify-center items-center rounded-full bg-[#667175] md:w-10 md:h-10">
                 <img
@@ -83,9 +90,31 @@ const Input = (props) => {
                     className={`w-7/12 md:w-5/12 ${props.imgCls}`}
                 />
             </div>
-        {input}
-          <img src={Incognito} alt="incognito icon" className=" w-5 mr-2" />
+            {input}
+            {props.secret && (
+                <img
+                    src={Incognito}
+                    alt="incognito icon"
+                    className=" w-5 mr-2"
+                />
+            )}
         </div>
+    );
+
+    // button components
+
+    const SubmitBtn = (
+        <input
+            type="submit"
+            value={props.value}
+            className=" w-full bg-[#676958] text-white text-2xl font-bold py-4 rounded-full cursor-pointer capitalize"
+        />
+    );
+
+    return (
+        <React.Fragment>
+            {props.type === "submit" ? SubmitBtn : inputComponent}
+        </React.Fragment>
     );
 };
 

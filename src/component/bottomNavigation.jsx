@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const bottomNavigation = (props) => {
     return (
-        <footer className="hidden md:block">
+        <footer className="hidden md:block relative z-50">
             <div className="container pt-0">
                 <div className="w-full flex justify-between xl:w-10/12 xl:mx-auto 2xl:w-8/12 mxl:w-7/12">
                     {/* links  */}
