@@ -1,36 +1,44 @@
 import React from "react";
 import HeaderBar from "./component/HeaderBar";
 import BottomNavigation from "./component/BottomNavigation";
-import { Switch, Route, Redirect } from "react-router-dom";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Redirect
+} from "react-router-dom";
+import { withRouter } from 'react-router'
 import SessionPage from "./component/MainPageIntro";
 
 const App = (props) => {
     return (
         <React.Fragment>
-            <HeaderBar />
-            <Switch>
-                <Route exact path="/">
-                    <Redirect to="/sessions" />
-                </Route>
-                <Route exact path="/about">
-                    {/* <Directory /> */}
-                </Route>
+            <Router>
+                {/* header links  */}
+                <HeaderBar />
+                {/* route  */}
+                <Switch>
+                    <Route exact path="/about"></Route>
 
-                <Route exact path="/faqs">
-                    <h1>Faqs</h1>
-                </Route>
-                <Route exact path="/contact-us">
-                    <h1>Hello Rejoan</h1>
-                </Route>
-                <Route to="/sessions">
-                    <SessionPage />
-                </Route>
-                <Route to="/directory">directory</Route>
-                <Route to="/submit-a-question">submit a question</Route>
-                <Route to="/meet-d-team">meet d team</Route>
-                <Route to="/archives">archives</Route>
-            </Switch>
-            <BottomNavigation />
+                    <Route exact path="/faqs">
+                        <h1>Faqs</h1>
+                    </Route>
+                    <Route exact path="/contact-us">
+                        <h1>Hello Rejoan</h1>
+                    </Route>
+                    <Route exact path="/sessions">
+                        <SessionPage />
+                    </Route>
+                    <Route exact path="/directory">
+                        <h1>Hello Mohd Rejoan</h1>
+                    </Route>
+
+                    <Route exact path="/salam">
+                        <h1>Salam alai kum</h1>
+                    </Route>
+                </Switch>
+                <BottomNavigation />
+            </Router>
         </React.Fragment>
     );
 };

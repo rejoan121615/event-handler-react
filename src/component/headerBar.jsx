@@ -13,7 +13,11 @@ const HeaderBar = (props) => {
         <header>
             <div className="container mx-auto flex flex-wrap justify-between sm:items-center">
                 {/* logo  */}
-                <Link to="/" id="logo" className="text-center text-black order-1">
+                <Link
+                    to="/"
+                    id="logo"
+                    className="text-center text-black order-1"
+                >
                     <h1 className="font-black uppercase font-sans text-2xl">
                         <span className="text-orange-600">md</span>
                         <span className="text-black">.</span>
