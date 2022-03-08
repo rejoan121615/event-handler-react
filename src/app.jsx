@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import { withRouter } from 'react-router'
 import SessionPage from "./component/MainPageIntro";
+import Directory from './page/Directory';
 
 const App = (props) => {
     return (
@@ -30,7 +31,7 @@ const App = (props) => {
                         <SessionPage />
                     </Route>
                     <Route exact path="/directory">
-                        <h1>Hello Mohd Rejoan</h1>
+                        <Directory />
                     </Route>
 
                     <Route exact path="/salam">

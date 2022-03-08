@@ -5,6 +5,7 @@ import Thum1 from "../../assets/img/directory/Hero Page/unsplash_8uZPynIu-rQ.png
 import Thum2 from "../../assets/img/directory/Hero Page/unsplash_OlTjeydUpQw.png";
 import Thum3 from "../../assets/img/directory/Hero Page/unsplash_pVq6YhmDPtk.png";
 import Thum4 from "../../assets/img/directory/Hero Page/unsplash_Tyg0rVhOTrE.png";
+import { QusAnsConsumer } from "../../Context/DirQusAnsPortals";
 
 const GetRightAns = (props) => {
     return (
@@ -55,7 +56,20 @@ const GetRightAns = (props) => {
                 get the answers you need.
             </p>
             {/* question and answer  */}
-            <ThumbnailLists items={[Thum1, Thum2, Thum3, Thum4]} big={true} text="456 Question answered" textStyle={'text-sec'} className="mt-4" />
+            <QusAnsConsumer>
+                {(value) => {
+                    return (
+                        <ThumbnailLists
+                            click={value.open}
+                            items={[Thum1, Thum2, Thum3, Thum4]}
+                            big={true}
+                            text="456 Question answered"
+                            textStyle={"text-sec"}
+                            className="mt-4"
+                        />
+                    );
+                }}
+            </QusAnsConsumer>
         </div>
     );
 };

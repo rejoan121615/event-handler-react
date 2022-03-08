@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 
+
 const ThumbnailLists = (props) => {
     return (
-        <div className={`flex items-center ml-3 ${props.className}`}>
+        <div onClick={props.click} className={`flex items-center ml-3 cursor-pointer ${props.className}`}>
             {/* all item container  */}
             <div className="flex">
                 {/* all items  */}

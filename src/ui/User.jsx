@@ -2,7 +2,6 @@ import React from 'react'
 import UserImg from '../assets/img/users/user.png'
 
 const User = (props) => {
-    console.log("user props => ", props)
   return (
       <div className=" flex mb-2 last:mb-0 2xl:mb-0">
           {/* img  */}
