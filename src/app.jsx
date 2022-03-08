@@ -7,9 +7,9 @@ import {
     Route,
     Redirect
 } from "react-router-dom";
-import { withRouter } from 'react-router'
 import SessionPage from "./component/MainPageIntro";
 import Directory from './page/Directory';
+import SubmitAQuestion from "./page/SubmitAQuestion";
 
 const App = (props) => {
     return (
@@ -34,8 +34,8 @@ const App = (props) => {
                         <Directory />
                     </Route>
 
-                    <Route exact path="/salam">
-                        <h1>Salam alai kum</h1>
+                    <Route exact path="/submit-a-question">
+                        <SubmitAQuestion />
                     </Route>
                 </Switch>
                 <BottomNavigation />
