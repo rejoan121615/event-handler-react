@@ -10,6 +10,7 @@ import {
 import SessionPage from "./component/MainPageIntro";
 import Directory from './page/Directory';
 import SubmitAQuestion from "./page/SubmitAQuestion";
+import MeetDExpart from "./page/MeetDExpart";
 
 const App = (props) => {
     return (
@@ -36,6 +37,9 @@ const App = (props) => {
 
                     <Route exact path="/submit-a-question">
                         <SubmitAQuestion />
+                    </Route>
+                    <Route exact path="/meet-d-team">
+                        <MeetDExpart />
                     </Route>
                 </Switch>
                 <BottomNavigation />
