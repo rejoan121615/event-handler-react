@@ -1,6 +1,7 @@
 import React from "react";
 import MeetTeamIntro from "../component/MeetDTeam/MeetTeamIntro";
 import Avatar from "../assets/img/meetDTeam/Group 2741.png";
+import { TeamDataProvider } from "../Context/MeetDExpartData";
 
 const MeetDExpart = () => {
     const teamList = [
@@ -104,7 +105,9 @@ const MeetDExpart = () => {
 
     return (
         <>
-            <MeetTeamIntro team={teamList} />
+            <TeamDataProvider value={{ team: teamList }}>
+                <MeetTeamIntro />
+            </TeamDataProvider>
         </>
     );
 };

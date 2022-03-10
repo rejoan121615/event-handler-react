@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import TeamCard from "../../ui/MeetDTean/TeamCard";
+import TeamGridView from "./TeamGridView";
+import TeamCarouselView from "./TeamCarouselView";
 
 const MeetTeamIntro = (props) => {
+    const [showGrid, setShowGrid] = useState(false);
+
+    const gridHandler = () => {
+        return setShowGrid(!showGrid);
+    };
+
     return (
         <section>
             <div className="container">
@@ -10,14 +17,24 @@ const MeetTeamIntro = (props) => {
                 <div className="flex flex-row justify-between">
                     <h1 className=" display-1 text-third">Meet 'd' Experts</h1>
                     <div className="">
-                        <button className=" px-3 py-2 rounded-lg bg-third-400">
+                        <button
+                            onClick={gridHandler}
+                            className={` px-3 py-2 rounded-lg ${
+                                !showGrid && "bg-third-400"
+                            } `}
+                        >
                             <FontAwesomeIcon
                                 icon={"border-all"}
                                 size="lg"
                                 className=" text-third"
                             />
                         </button>
-                        <button className=" px-3 py-2 rounded-lg">
+                        <button
+                            onClick={gridHandler}
+                            className={` px-3 py-2 rounded-lg ${
+                                showGrid && "bg-third-400"
+                            } `}
+                        >
                             <FontAwesomeIcon
                                 icon={"ellipsis"}
                                 size="lg"
@@ -27,11 +44,7 @@ const MeetTeamIntro = (props) => {
                     </div>
                 </div>
                 {/* cards container  */}
-                <div className="grid mt-10 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-6 xl:gap-y-10 2xl:grid-cols-4 2xl:gap-y-5 2xl:gap-x-4 mxl:gap-y-12 mxl:gap-x-16">
-                    {props.team.map((team, index) => {
-                        return <TeamCard {...team} key={index + "i"} />;
-                    })}
-                </div>
+                {showGrid ? <TeamCarouselView /> : <TeamGridView />}
             </div>
         </section>
     );
