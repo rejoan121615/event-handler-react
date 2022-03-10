@@ -4,7 +4,7 @@ import TeamGridView from "./TeamGridView";
 import TeamCarouselView from "./TeamCarouselView";
 
 const MeetTeamIntro = (props) => {
-    const [showGrid, setShowGrid] = useState(false);
+    const [showGrid, setShowGrid] = useState(true);
 
     const gridHandler = () => {
         return setShowGrid(!showGrid);
@@ -44,8 +44,8 @@ const MeetTeamIntro = (props) => {
                     </div>
                 </div>
                 {/* cards container  */}
-                {showGrid ? <TeamCarouselView /> : <TeamGridView />}
             </div>
+            {showGrid ? <TeamCarouselView /> : <TeamGridView />}
         </section>
     );
 };
