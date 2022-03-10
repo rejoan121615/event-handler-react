@@ -30,7 +30,7 @@ const TeamCard = (props) => {
     });
 
     return (
-        <div className=" flex gap-x-6">
+        <div className=" flex gap-x-6 lg:flex-col xl:flex-row">
             {/* left image  */}
             <div className="">
                 <img src={props.img} alt="" />
