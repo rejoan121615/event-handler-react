@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 
-const Week = () => {
+const Week = (props) => {
+    console.log(props.weekData);
     return (
         <section>
             {/* heading  */}
@@ -21,8 +22,12 @@ const Week = () => {
             <div className="">
                 {/* slider wrapper  */}
                 <Swiper slidesPerView={4}>
-                    <SwiperSlide></SwiperSlide>
-                    
+                    {props.weekData.map((item, index) => {
+                        return(
+                        <SwiperSlide key={index + "i"} className="">
+                            Hello Rejoan
+                        </SwiperSlide>)
+                    })}
                 </Swiper>
             </div>
         </section>
