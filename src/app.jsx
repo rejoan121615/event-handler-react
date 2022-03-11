@@ -11,6 +11,7 @@ import SessionPage from "./component/MainPageIntro";
 import Directory from './page/Directory';
 import SubmitAQuestion from "./page/SubmitAQuestion";
 import MeetDExpart from "./page/MeetDExpart";
+import Archives from './page/Archives';
 
 const App = (props) => {
     return (
@@ -40,6 +41,9 @@ const App = (props) => {
                     </Route>
                     <Route exact path="/meet-d-team">
                         <MeetDExpart />
+                    </Route>
+                    <Route exact path="/archives">
+                        <Archives />
                     </Route>
                 </Switch>
                 <BottomNavigation />
