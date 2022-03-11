@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./app";
+import "swiper/css/bundle";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
     fab,

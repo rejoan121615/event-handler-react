@@ -5,7 +5,6 @@ import ProfileGenerator from "../../ui/MeetDTean/ProfileGenerator";
 // swiper slider
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Scrollbar, A11y } from "swiper";
-import "swiper/css/bundle";
 
 const TeamCarouselView = () => {
     const team = useContext(TeamData);
