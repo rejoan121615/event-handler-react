@@ -1,32 +1,31 @@
 import React, { useState } from "react";
-import moment from "moment";
+import Calender from "../component/Archives/Calender";
+import Week from '../component/Archives/Week';
 
 const Archives = () => {
-    // generate months
-  const [monthList, setMonthList] = useState(moment.monthsShort());
-    console.log(moment().month(3))
 
-    return (
-        <section>
-            <div className="container">
-                {/* month wrapper  */}
-                <div className=" grid grid-cols-4 grid-rows-3 gap-10 max-w-[1000px] mx-auto">
-                    {monthList.map((month, index) => {
-                        return (
-                            <div
-                            className=" w-32 h-32 rounded-full bg-[#556166] hover:bg-[#555553] text-[#ff8944]
-                                  font-bold text-3xl flex justify-center items-center uppercase justify-items-center cursor-pointer transition-all
-                                  "
-                                key={index + "i"}
-                            >
-                                {month}
-                            </div>
-                        );
-                    })}
-                </div>
-            </div>
-        </section>
-    );
+
+  const [weeks, setWeeks] = useState(
+    [
+      {
+        name: 'wednesday',
+        date: 'Jan 7th, 2022',
+        tag: '#UX Design',
+        background: ''
+      }
+    ]
+  );
+
+
+    // generate months
+  return (
+    <React.Fragment>
+      {/* <Calender /> */}
+      <Week />
+
+    </React.Fragment>
+  )
+  
 };
 
 export default Archives;
