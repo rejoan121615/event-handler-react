@@ -1,6 +1,5 @@
 const defaultTheme = require("tailwindcss/defaultConfig");
 
-
 module.exports = {
     content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
     theme: {
@@ -38,6 +37,9 @@ module.exports = {
                 "sec-100": "#ffb9b917",
                 third: "#65fdbd",
                 "third-400": "#50ca9685",
+                "half-yellow": "#ff8944",
+                "hover-yellow": "#555553",
+                "not-white": "#556166",
             },
             gridTemplateColumns: {
                 "lg-1/1.2": "1fr 1.3fr",
