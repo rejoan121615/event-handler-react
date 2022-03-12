@@ -1,8 +1,10 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import moment from "moment";
+import { Link, useRouteMatch } from "react-router-dom";
 
 const Calender = () => {
-  const [monthList, setMonthList] = useState(moment.monthsShort());
+    const [monthList, setMonthList] = useState(moment.monthsShort());
+    const { path, url } = useRouteMatch();
 
     return (
         <section>
@@ -11,14 +13,15 @@ const Calender = () => {
                 <div className=" grid grid-cols-4 grid-rows-3 gap-10 max-w-[1000px] mx-auto">
                     {monthList.map((month, index) => {
                         return (
-                            <div
-                                className=" w-32 h-32 rounded-full bg-[#556166] hover:bg-[#555553] text-[#ff8944]
-                                  font-bold text-3xl flex justify-center items-center uppercase justify-items-center cursor-pointer transition-all
-                                  "
-                                key={index + "i"}
-                            >
-                                {month}
-                            </div>
+                            <Link key={index + "i"} to={`${url}/week`}>
+                                <div
+                                    className=" w-32 h-32 rounded-full bg-[#556166] hover:bg-[#555553] text-[#ff8944]
+                                font-bold text-3xl flex justify-center items-center uppercase justify-items-center cursor-pointer transition-all
+                                "
+                                >
+                                    {month}
+                                </div>
+                            </Link>
                         );
                     })}
                 </div>

@@ -7,8 +7,10 @@ import Three from "../assets/img/archives/three.jpg";
 import Four from "../assets/img/archives/four.jpg";
 import Five from "../assets/img/archives/five.jpg";
 import Six from "../assets/img/archives/six.jpg";
+import { Route, Switch, useRouteMatch } from "react-router-dom";
 
 const Archives = () => {
+    let { url, path } = useRouteMatch();
     const [weeks, setWeeks] = useState([
         {
             name: "wednesday",
@@ -51,8 +53,7 @@ const Archives = () => {
     // generate months
     return (
         <React.Fragment>
-            {/* <Calender /> */}
-            <Week month={'january'} weekData={weeks} />
+            <Calender />
         </React.Fragment>
     );
 };

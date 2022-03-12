@@ -1,19 +1,67 @@
-import React from "react";
+import React, {useState} from "react";
 import HeaderBar from "./component/HeaderBar";
 import BottomNavigation from "./component/BottomNavigation";
 import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Redirect
+    Redirect,
+    useRouteMatch
 } from "react-router-dom";
 import SessionPage from "./component/MainPageIntro";
 import Directory from './page/Directory';
 import SubmitAQuestion from "./page/SubmitAQuestion";
 import MeetDExpart from "./page/MeetDExpart";
-import Archives from './page/Archives';
+import Archives from "./page/Archives";
+import Week from "./component/Archives/Week";
+import OneImg from "./assets/img/archives/one.jpg";
+import Two from "./assets/img/archives/two.jpg";
+import Three from "./assets/img/archives/three.jpg";
+import Four from "./assets/img/archives/four.jpg";
+import Five from "./assets/img/archives/five.jpg";
+import Six from "./assets/img/archives/six.jpg";
 
 const App = (props) => {
+
+
+    const [weeks, setWeeks] = useState([
+        {
+            name: "wednesday",
+            date: "Jan 7th, 2022",
+            tag: "#UX Design",
+            background: OneImg,
+        },
+        {
+            name: "wednesday",
+            date: "Jan 7th, 2022",
+            tag: "#UX Design",
+            background: Two,
+        },
+        {
+            name: "wednesday",
+            date: "Jan 7th, 2022",
+            tag: "#UX Design",
+            background: Three,
+        },
+        {
+            name: "wednesday",
+            date: "Jan 7th, 2022",
+            tag: "#UX Design",
+            background: Four,
+        },
+        {
+            name: "wednesday",
+            date: "Jan 7th, 2022",
+            tag: "#UX Design",
+            background: Five,
+        },
+        {
+            name: "wednesday",
+            date: "Jan 7th, 2022",
+            tag: "#UX Design",
+            background: Six,
+        },
+    ]);
     return (
         <React.Fragment>
             <Router>
@@ -35,7 +83,6 @@ const App = (props) => {
                     <Route exact path="/directory">
                         <Directory />
                     </Route>
-
                     <Route exact path="/submit-a-question">
                         <SubmitAQuestion />
                     </Route>
@@ -44,6 +91,9 @@ const App = (props) => {
                     </Route>
                     <Route exact path="/archives">
                         <Archives />
+                    </Route>
+                    <Route exact path="/archives/week">
+                        <Week month={"january"} weekData={weeks} />
                     </Route>
                 </Switch>
                 <BottomNavigation />
