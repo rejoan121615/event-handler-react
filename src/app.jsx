@@ -13,6 +13,7 @@ import Directory from './page/Directory';
 import SubmitAQuestion from "./page/SubmitAQuestion";
 import MeetDExpart from "./page/MeetDExpart";
 import Archives from "./page/Archives";
+import About from "./page/About";
 import Week from "./component/Archives/Week";
 import OneImg from "./assets/img/archives/one.jpg";
 import Two from "./assets/img/archives/two.jpg";
@@ -69,7 +70,9 @@ const App = (props) => {
                 <HeaderBar />
                 {/* route  */}
                 <Switch>
-                    <Route exact path="/about"></Route>
+                    <Route exact path="/about">
+                        <About />
+                    </Route>
 
                     <Route exact path="/faqs">
                         <h1>Faqs</h1>
