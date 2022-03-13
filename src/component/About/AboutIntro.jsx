@@ -6,6 +6,7 @@ const AboutIntro = () => {
         <React.Fragment>
             <AboutCard
                 title="Get to Know Us"
+                
                 titleDis={[
                     "We' here to help",
                     "Feel free to ask Questions on",

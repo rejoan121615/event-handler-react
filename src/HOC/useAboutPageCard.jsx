@@ -14,13 +14,18 @@ const useAboutPageCard = (PassedComponent, name) => {
             super(props);
         }
 
+        componentDidMount() {
+            console.log(this.props);
+        }
+
         // render
         render() {
-            const { tag, title, titleDis, para } = this.props;
+            const { tag, title, titleClass, titleDis, para, tagClass } =
+                this.props;
             return (
                 <React.Fragment>
                     <section>
-                        <div className="container flex flex-col gap-y-6 sm:flex-row sm:items-center ">
+                        <div className="container flex flex-col gap-y-6 py-36 sm:flex-row sm:items-center xl:py-0 ">
                             {/* right avatar  */}
                             <div className=" w-6/6 sm:w-3/6 sm:order-1">
                                 <PassedComponent {...this.props} />
@@ -28,9 +33,9 @@ const useAboutPageCard = (PassedComponent, name) => {
                             {/* left side texts  */}
                             <div className=" w-6/6 sm:w-3/6">
                                 <h2
-                                    className=" text-third font-bold text-4xl
-                    md:text-5xl
-                    lg:text-6xl"
+                                    className={` font-bold text-4xl md:text-5xl lg:text-6xl ${
+                                        titleClass ? titleClass : "text-third"
+                                    }`}
                                 >
                                     {title}
                                 </h2>
@@ -59,6 +64,17 @@ const useAboutPageCard = (PassedComponent, name) => {
                                             })}
                                     </h4>
                                 </div>
+                                {/* para  */}
+                                {para && (
+                                    <p
+                                        className=" 
+                                        text-base text-[#CCCCCC] mt-2 w-5/6
+                                        md:mt-4 2xl:mt-6
+                                        "
+                                    >
+                                        {para}
+                                    </p>
+                                )}
                                 {/* tag list  */}
                                 {tag && (
                                     <div className=" flex gap-x-4 flex-wrap">
@@ -67,20 +83,15 @@ const useAboutPageCard = (PassedComponent, name) => {
                                                 <Tag
                                                     tag={item}
                                                     key={` tag${index}`}
-                                                    className=" text-third bg-[#45605f]"
+                                                    className={
+                                                        tagClass
+                                                            ? tagClass
+                                                            : "text-third bg-[#45605f]"
+                                                    }
                                                 />
                                             );
                                         })}
                                     </div>
-                                )}
-                                {/* para  */}
-                                {para && (
-                                    <p className=" 
-                                        text-base text-[#CCCCCC] mt-2 w-5/6
-                                        md:mt-4 2xl:mt-6
-                                        ">
-                                        {para}
-                                    </p>
                                 )}
                             </div>
                         </div>
