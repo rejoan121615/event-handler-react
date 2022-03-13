@@ -11,7 +11,7 @@ const Week = (props) => {
             {/* heading  */}
             <div className="container">
                 <Link
-                    to="/archives"
+                    to="/archives/calender"
                     className=" text-white capitalize text-xl font-medium"
                 >
                     <FontAwesomeIcon icon="angle-left" className="mr-3" />
@@ -30,7 +30,7 @@ const Week = (props) => {
                                    text-sm rounded-full py-2 px-5 bg-not-white text-white font-medium capitalize
                                    cursor-pointer hover:text-half-yellow hover:bg-hover-yellow transition-all"
                                 style={props.style}
-                                key={index + 'i'}
+                                key={index + "i"}
                             >
                                 Week {index + 1}
                             </h6>
