@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import HeaderBar from "./component/HeaderBar";
 import BottomNavigation from "./component/BottomNavigation";
 import {
@@ -6,10 +6,10 @@ import {
     Switch,
     Route,
     Redirect,
-    useRouteMatch
+    useRouteMatch,
 } from "react-router-dom";
 import SessionPage from "./component/MainPageIntro";
-import Directory from './page/Directory';
+import Directory from "./page/Directory";
 import SubmitAQuestion from "./page/SubmitAQuestion";
 import MeetDExpart from "./page/MeetDExpart";
 import Archives from "./page/Archives";
@@ -21,10 +21,10 @@ import Three from "./assets/img/archives/three.jpg";
 import Four from "./assets/img/archives/four.jpg";
 import Five from "./assets/img/archives/five.jpg";
 import Six from "./assets/img/archives/six.jpg";
+import OurPlan from "./component/About/OurPlan";
+
 
 const App = (props) => {
-
-
     const [weeks, setWeeks] = useState([
         {
             name: "wednesday",
@@ -92,12 +92,16 @@ const App = (props) => {
                     <Route exact path="/meet-d-team">
                         <MeetDExpart />
                     </Route>
-                    <Route exact path="/archives">
+                    <Route path="/archives">
                         <Archives />
+                        <Redirect to="/archives/calender" />
                     </Route>
-                    <Route exact path="/archives/week">
+                    {/* <Route exact path="/archives/week">
                         <Week month={"january"} weekData={weeks} />
-                    </Route>
+                    </Route> */}
+                    {/* <Route exact path="/about/our-plan">
+                        <OurPlan />
+                    </Route> */}
                 </Switch>
                 <BottomNavigation />
             </Router>

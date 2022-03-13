@@ -7,7 +7,7 @@ import Three from "../assets/img/archives/three.jpg";
 import Four from "../assets/img/archives/four.jpg";
 import Five from "../assets/img/archives/five.jpg";
 import Six from "../assets/img/archives/six.jpg";
-import { Route, Switch, useRouteMatch } from "react-router-dom";
+import { Route, Switch, useRouteMatch, Redirect } from "react-router-dom";
 
 const Archives = () => {
     let { url, path } = useRouteMatch();
@@ -53,7 +53,14 @@ const Archives = () => {
     // generate months
     return (
         <React.Fragment>
-            <Calender />
+            <Switch>
+                <Route exact path="/archives/calender">
+                    <Calender />
+                </Route>
+                <Route exact path="/archives/week">
+                    <Week month={"january"} weekData={weeks} />
+                </Route>
+            </Switch>
         </React.Fragment>
     );
 };
