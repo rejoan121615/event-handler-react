@@ -70,10 +70,9 @@ const App = (props) => {
                 <HeaderBar />
                 {/* route  */}
                 <Switch>
-                    <Route exact path="/about">
+                    <Route path="/about">
                         <About />
                     </Route>
-
                     <Route exact path="/faqs">
                         <h1>Faqs</h1>
                     </Route>

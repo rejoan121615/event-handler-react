@@ -14,12 +14,9 @@ const useAboutPageCard = (PassedComponent, name) => {
             super(props);
         }
 
-        componentDidMount() {
-            console.log(this.props);
-        }
         // render
         render() {
-            const { tag, title, titleDis } = this.props;
+            const { tag, title, titleDis, para } = this.props;
             return (
                 <React.Fragment>
                     <section>
@@ -45,20 +42,21 @@ const useAboutPageCard = (PassedComponent, name) => {
                         lg:text-[30px] lg:leading-[38px]
                         xl:leading-[45px] xl:text-[35px]"
                                     >
-                                        {titleDis && titleDis.map((text, index) => {
-                                            return (
-                                                <span
-                                                    key={index + "span"}
-                                                    className={
-                                                        index === 1
-                                                            ? "block text-[#9d9fa1]"
-                                                            : null
-                                                    }
-                                                >
-                                                    {text}
-                                                </span>
-                                            );
-                                        })}
+                                        {titleDis &&
+                                            titleDis.map((text, index) => {
+                                                return (
+                                                    <span
+                                                        key={index + "span"}
+                                                        className={
+                                                            index === 1
+                                                                ? "block text-[#9d9fa1]"
+                                                                : null
+                                                        }
+                                                    >
+                                                        {text}
+                                                    </span>
+                                                );
+                                            })}
                                     </h4>
                                 </div>
                                 {/* tag list  */}
@@ -74,6 +72,15 @@ const useAboutPageCard = (PassedComponent, name) => {
                                             );
                                         })}
                                     </div>
+                                )}
+                                {/* para  */}
+                                {para && (
+                                    <p className=" 
+                                        text-base text-[#CCCCCC] mt-2 w-5/6
+                                        md:mt-4 2xl:mt-6
+                                        ">
+                                        {para}
+                                    </p>
                                 )}
                             </div>
                         </div>
