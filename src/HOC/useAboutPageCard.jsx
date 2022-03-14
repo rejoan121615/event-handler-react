@@ -1,12 +1,7 @@
 import React from "react";
-import One from "../assets/img/about/one.jpg";
-import Two from "../assets/img/about/two.jpg";
-import Three from "../assets/img/about/three.jpg";
-import Four from "../assets/img/about/four.jpg";
-import Five from "../assets/img/about/five.jpg";
-import Six from "../assets/img/about/six.jpg";
 import Tag from "../ui/Tag";
-import ThumbnailLists from "../ui/ThumbnailLists";
+import Input from "../ui/Input";
+import SearchIcon from "../assets/icons/search.png";
 
 const useAboutPageCard = (PassedComponent, name) => {
     return class NewComponent extends React.Component {
@@ -14,13 +9,9 @@ const useAboutPageCard = (PassedComponent, name) => {
             super(props);
         }
 
-        componentDidMount() {
-            console.log(this.props);
-        }
-
         // render
         render() {
-            const { tag, title, titleClass, titleDis, para, tagClass } =
+            const { tag, title, titleClass, titleDis, para, tagClass, search } =
                 this.props;
             return (
                 <React.Fragment>
@@ -91,6 +82,18 @@ const useAboutPageCard = (PassedComponent, name) => {
                                                 />
                                             );
                                         })}
+                                    </div>
+                                )}
+                                {/* search bar  */}
+                                {search && (
+                                    <div className=" mt-10 xl:w-5/6">
+                                        <Input
+                                            type="text"
+                                            placeholder="Search for anything"
+                                            icon={SearchIcon}
+                                            imgBg="bg-transparent"
+                                            {...this.props}
+                                        />
                                     </div>
                                 )}
                             </div>

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
 import Incognito from "../assets/img/icons/form/incognito.png";
 
 const Input = (props) => {
@@ -7,7 +6,16 @@ const Input = (props) => {
 
     const changeHandler = (event) => {
         setInputVal(event.target.value);
+        props.change(event);
     };
+
+    const focusHandler = (event) => {
+        props.focus(event);
+    }
+
+    const blurHandler = (event) => {
+        props.blur(event);
+    }
 
     let input;
     switch (props.type) {
@@ -73,6 +81,8 @@ const Input = (props) => {
                     type={props.type}
                     value={inputVal}
                     onChange={changeHandler}
+                    onFocus={focusHandler}
+                    onBlur={blurHandler}
                     placeholder={props.placeholder}
                     className=" bg-transparent rounded-full focus:outline-none pl-2 text-white text-sm sm:text-base w-[85%]"
                 />
@@ -83,7 +93,9 @@ const Input = (props) => {
     // input components
     const inputComponent = (
         <div className=" bg-[#556166] rounded-full p-2 flex items-center md:p-3">
-            <div className=" w-8 h-8 flex justify-center items-center rounded-full bg-[#667175] md:w-10 md:h-10">
+            <div
+                className={`w-8 h-8 flex justify-center items-center rounded-full bg-[#667175] md:w-10 md:h-10 ${props.imgBg}`}
+            >
                 <img
                     src={props.icon}
                     alt="catagory"

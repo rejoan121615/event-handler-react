@@ -40,23 +40,7 @@ const NeedHelpForm = (props) => {
             
         ],
     ];
-    // const inputFields = [
-    //     {
-    //         type: "text",
-    //         icon: Profile,
-    //         placeholder:
-    //             "Please tell us your name ... (we will keep it secret)",
-    //     },
-    //     {
-    //         type: "email",
-    //         icon: Email,
-    //         placeholder: 'Your email address.'
-    //     }, {
-    //         type: 'text',
-    //         icon: Work,
-    //         placeholder: 'Tell us about that job.'
-    //     }
-    // ];
+    
 
     // submit handle
     const submitHandle = (event) => {
