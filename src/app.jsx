@@ -15,6 +15,7 @@ import MeetDExpart from "./page/MeetDExpart";
 import Archives from "./page/Archives";
 import About from "./page/About";
 import Faq from "./page/Faq";
+import FaqQuestion from "./page/FaqQuestion";
 
 const App = (props) => {
     return (
@@ -48,6 +49,9 @@ const App = (props) => {
                     <Route path="/archives">
                         <Archives />
                         <Redirect to="/archives/calender" />
+                    </Route>
+                    <Route path="/faq/qus">
+                        <FaqQuestion />
                     </Route>
                 </Switch>
                 <BottomNavigation />

@@ -11,11 +11,11 @@ const Input = (props) => {
 
     const focusHandler = (event) => {
         props.focus(event);
-    }
+    };
 
     const blurHandler = (event) => {
         props.blur(event);
-    }
+    };
 
     let input;
     switch (props.type) {
@@ -94,7 +94,9 @@ const Input = (props) => {
     const inputComponent = (
         <div className=" bg-[#556166] rounded-full p-2 flex items-center md:p-3">
             <div
-                className={`w-8 h-8 flex justify-center items-center rounded-full bg-[#667175] md:w-10 md:h-10 ${props.imgBg}`}
+                className={`w-8 h-8 flex justify-center items-center rounded-full  md:w-10 md:h-10 ${
+                    props.imgBg ? props.imgBg : "bg-[#667175]"
+                }`}
             >
                 <img
                     src={props.icon}
