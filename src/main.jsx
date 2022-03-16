@@ -15,7 +15,8 @@ import {
     faBorderAll,
     faGem,
     faR,
-    faAngleLeft
+    faAngleLeft,
+    faAngleDown,
 } from "@fortawesome/free-solid-svg-icons";
 
 ReactDOM.render(
@@ -33,5 +34,6 @@ library.add(
     faJs,
     faDribbble,
     faGem,
-    faAngleLeft
+    faAngleLeft,
+    faAngleDown
 );

@@ -7,7 +7,7 @@ import AvatarQuote from "../ui/AvatarQuote";
 
 const ThreeAvatarGroup = () => {
     return (
-        <div className=" flex flex-col gap-y-8 sm:mt-0 sm:gap-0">
+        <div className=" flex flex-col gap-y-8 sm:mt-0 sm:gap-0 2xl:w-7/12 2xl:ml-auto">
             {/* oh yeah avatar */}
             <div className=" relative">
                 <img
