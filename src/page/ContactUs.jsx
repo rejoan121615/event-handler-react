@@ -1,5 +1,6 @@
 import React from "react";
 import Contact from "../component/Contact/Contact";
+import CookieNotification from "../component/CookieNotification";
 
 const ContactUs = () => {
     return (

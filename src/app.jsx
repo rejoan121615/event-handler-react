@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HeaderBar from "./component/HeaderBar";
 import BottomNavigation from "./component/BottomNavigation";
 import {
@@ -17,8 +17,30 @@ import About from "./page/About";
 import Faq from "./page/Faq";
 import FaqQuestion from "./page/FaqQuestion";
 import ContactUs from "./page/ContactUs";
+// alert box
+import CookieNotification from "./component/CookieNotification";
 
 const App = (props) => {
+    const [cookieCom, setCookieCom] = useState("");
+
+    const acceptHandle = () => {
+        setCookieCom('')
+    };
+    const declineHandler = () => {
+        setCookieCom('')
+    };
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setCookieCom(
+                <CookieNotification
+                    accept={acceptHandle}
+                    decline={declineHandler}
+                />
+            );
+        }, 5000);
+    }, []);
+
     return (
         <React.Fragment>
             <Router>
@@ -57,6 +79,7 @@ const App = (props) => {
                 </Switch>
                 <BottomNavigation />
             </Router>
+            {cookieCom}
         </React.Fragment>
     );
 };
