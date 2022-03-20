@@ -16,6 +16,7 @@ import Archives from "./page/Archives";
 import About from "./page/About";
 import Faq from "./page/Faq";
 import FaqQuestion from "./page/FaqQuestion";
+import ContactUs from "./page/ContactUs";
 
 const App = (props) => {
     return (
@@ -32,7 +33,7 @@ const App = (props) => {
                         <Faq />
                     </Route>
                     <Route exact path="/contact-us">
-                        <h1>Hello Rejoan</h1>
+                        <ContactUs />
                     </Route>
                     <Route exact path="/sessions">
                         <SessionPage />

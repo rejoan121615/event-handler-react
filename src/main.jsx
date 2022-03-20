@@ -9,6 +9,9 @@ import {
     faGithub,
     faJs,
     faDribbble,
+    faLinkedin,
+    faTwitter,
+    faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import {
     faEllipsis,
@@ -17,6 +20,7 @@ import {
     faR,
     faAngleLeft,
     faAngleDown,
+    faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 
 ReactDOM.render(
@@ -35,5 +39,9 @@ library.add(
     faDribbble,
     faGem,
     faAngleLeft,
-    faAngleDown
+    faAngleDown,
+    faEnvelope,
+    faTwitter,
+    faInstagram,
+    faLinkedin
 );
