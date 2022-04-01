@@ -7,7 +7,9 @@ const PortalElement = (props) => {
             {/* backdrop  */}
             <div className=" bg-black opacity-80 w-screen h-screen fixed top-0 left-0"></div>
             {/* content  */}
-            <div className={`relative p-5 bg-[#546166] rounded-[30px] ${props.className}`}>
+            <div
+                className={`relative p-5 bg-[#546166] rounded-[30px] ${props.className}`}
+            >
                 {props.children}
             </div>
         </section>
@@ -25,9 +27,8 @@ const usePortal = (PushedComponent, styleClass) => {
         render() {
             return ReactDOM.createPortal(
                 <PortalElement className={styleClass}>
-                    <PushedComponent/>
+                    <PushedComponent />
                 </PortalElement>,
-                // <h1>Hello rejoan</h1>,
                 document.getElementById("portals-root")
             );
         }
